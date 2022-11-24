@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { myerror } from '../utils'
-import { BinaryInputSpec, ContinuousKeyboardInputSpec, GravityKeyboardInputSpec, Intensity1DInputSpec} from '@covfee-types/input/1d_intensity'
+import { BinaryInputSpec, ContinuousKeyboardInputSpec, GravityKeyboardInputSpec, Intensity1DInputSpec } from '@covfee-types/input/1d_intensity'
 import { ButtonManagerClient } from './button_manager'
 import styled from 'styled-components'
 
@@ -16,7 +16,7 @@ interface Props {
     /*
      * Returns the value of the intensity reading.
      */
-    getIntensity?: ()=>number
+    getIntensity?: () => number
     /**
      * Indicates how the intensity is input
      */
@@ -28,6 +28,7 @@ interface Props {
     replay?: boolean
     buttons: ButtonManagerClient
     buffer: any
+    navigator: Navigator
 }
 
 
@@ -57,7 +58,7 @@ export class OneDIntensity extends React.Component<Props> {
             this.containerHeight = entries[0].contentRect.height - 20
         })
         this.observer.observe(this.container)
-        
+
         this.startInput()
     }
 
@@ -69,7 +70,7 @@ export class OneDIntensity extends React.Component<Props> {
     }
 
     componentDidUpdate(prevProps: Readonly<Props>): void {
-        if(this.props.paused) {
+        if (this.props.paused) {
             cancelAnimationFrame(this.animationId)
         } else {
             this.animateFn()
@@ -85,7 +86,7 @@ export class OneDIntensity extends React.Component<Props> {
     // }
 
     get controls() {
-        if(this.props.input.mode == 'continuous-mousemove') return null
+        if (this.props.input.mode == 'continuous-mousemove') return null
 
         return this.props.input.controls ? this.props.input.controls : {}
     }
@@ -117,11 +118,11 @@ export class OneDIntensity extends React.Component<Props> {
             .addEvent('keydown', () => {
                 this.intensity = Math.max(0, this.intensity - 0.05)
             })
-            
+
         this.props.buttons.applyMap({
             'up': 'ArrowUp',
             'down': 'ArrowDown'
-        },this.controls)
+        }, this.controls)
     }
 
     startGravityKeyboard = () => {
@@ -130,10 +131,22 @@ export class OneDIntensity extends React.Component<Props> {
                 this.intensity = 1
                 this.speed = 0//this.props.input.jump_speed
             })
-        
+
         this.props.buttons.applyMap({
             'up': 'a'
-        },this.controls)
+        }, this.controls)
+    }
+
+    startGamepad = () => {
+        window.addEventListener('gamepadconnected', (e) => {
+            console.log("Gamepad connected at index %d: %s. %d buttons, %d axes.",
+                e.gamepad.index, e.gamepad.id,
+                e.gamepad.buttons.length, e.gamepad.axes.length);
+        })
+        window.addEventListener("gamepaddisconnected", (e) => {
+            console.log("Gamepad disconnected from index %d: %s",
+                e.gamepad.index, e.gamepad.id);
+        })
     }
 
     startInput = () => {
@@ -141,7 +154,8 @@ export class OneDIntensity extends React.Component<Props> {
             'binary': this.startBinaryKeyboard,
             'continuous-mousemove': this.startMousemove,
             'continuous-keyboard': this.startContinuousKeyboard,
-            'gravity-keyboard': this.startGravityKeyboard
+            'gravity-keyboard': this.startGravityKeyboard,
+            'gamepad': this.startGamepad
         }[this.props.input.mode]()
     }
 
@@ -158,7 +172,7 @@ export class OneDIntensity extends React.Component<Props> {
             'binary': () => {
                 this.animationId = requestAnimationFrame(this.animateFn)
 
-                if(this.props.replay) 
+                if (this.props.replay)
                     this.intensity = this.props.getIntensity()
                 else {
                     this.intensity = this.props.buttons.getStatus('up') ? 1 : 0
@@ -169,7 +183,7 @@ export class OneDIntensity extends React.Component<Props> {
             'continuous-mousemove': () => {
                 this.animationId = requestAnimationFrame(this.animateFn)
 
-                if(this.props.replay) 
+                if (this.props.replay)
                     this.intensity = this.props.getIntensity()
                 else {
                     this.intensity = this.props.buttons.getStatus('up') ? 1 : 0
@@ -184,7 +198,7 @@ export class OneDIntensity extends React.Component<Props> {
             'continuous-keyboard': () => {
                 this.animationId = requestAnimationFrame(this.animateFn)
 
-                if(this.props.replay) 
+                if (this.props.replay)
                     this.intensity = this.props.getIntensity()
                 else {
                     this.intensity = this.props.buttons.getStatus('up') ? 1 : 0
@@ -199,7 +213,7 @@ export class OneDIntensity extends React.Component<Props> {
             'gravity-keyboard': () => {
                 this.animationId = requestAnimationFrame(this.animateFn)
 
-                if(this.props.replay) 
+                if (this.props.replay)
                     this.intensity = this.props.getIntensity()
                 else {
                     this.intensity = this.props.buttons.getStatus('up') ? 1 : 0
@@ -215,14 +229,32 @@ export class OneDIntensity extends React.Component<Props> {
 
                 const position = Math.round(this.intensity * this.containerHeight)
                 this.indicator.style.bottom = position.toString() + 'px'
+            },
+            'gamepad': () => {
+                this.animationId = requestAnimationFrame(this.animateFn)
+
+                if (this.props.replay)
+                    this.intensity = this.props.getIntensity()
+                else {
+                    // get first controller
+                    const gp = navigator.getGamepads().find(x => x.id.includes("STANDARD GAMEPAD Vendor"))
+                    if (gp) {
+                        // 7 is the index of right trigger
+                        this.intensity = gp.buttons[7]['value']
+                        console.log("yessir")
+                    }
+                    this.props.setIntensity(this.intensity)
+                }
+                const position = Math.round(this.intensity * this.containerHeight)
+                this.indicator.style.bottom = position.toString() + 'px'
             }
         }[this.props.input.mode]
     }
 
     render() {
-        return <Container ref={e=>{this.container = e}}>
+        return <Container ref={e => { this.container = e }}>
             {!['binary'].includes(this.props.input.mode) &&
-            <Indicator ref={e=>{this.indicator = e}} style={{bottom: 0}}/>
+                <Indicator ref={e => { this.indicator = e }} style={{ bottom: 0 }} />
             }
         </Container>
     }

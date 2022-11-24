@@ -198,7 +198,7 @@ export default class Continuous1DTask extends CovfeeContinuousTask<Props, State>
     render() {
         if(['ranktrace', 'ranktrace-new', 'gtrace'].includes(this.props.spec.intensityInput.mode))
             return this.renderTrace()
-        else if(['continuous-mousemove', 'continuous-keyboard', 'gravity-keyboard', 'binary'].includes(this.props.spec.intensityInput.mode))
+        else if(['continuous-mousemove', 'continuous-keyboard', 'gravity-keyboard', 'binary', 'gamepad'].includes(this.props.spec.intensityInput.mode))
             return this.renderLever()
         else return null
     }

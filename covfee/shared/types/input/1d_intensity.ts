@@ -92,8 +92,19 @@ export interface ContinuousKeyboardInputSpec extends BaseInputSpec{
     controls?: ContinuousValueControls
 }
 
+/**
+ * @title continuous-keyboard
+ */
+ export interface GamepadInputSpec extends BaseInputSpec{
+    /**
+     * @default "gamepad"
+     */
+    mode: "gamepad"
+}
+
+
 
 export type Intensity1DInputSpec = BinaryInputSpec | 
                                    ContinuousMousemoveInputSpec | 
                                    ContinuousKeyboardInputSpec | 
-                                   GravityKeyboardInputSpec
+                                   GravityKeyboardInputSpec | GamepadInputSpec
