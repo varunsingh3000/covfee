@@ -1,0 +1,109 @@
+{
+    "name": "FinalSSP project",
+    "id": "finalssp_project",
+    "email": "wo1shi2wx3@gmail.com",
+    "hits": [{
+        "id": "1_hit",
+        "name": "Annotating the Laughing Action",
+        "tasks": [
+            {
+                "name": "Consent",
+                "type": "InstructionsTask",
+                "prerequisite": true,
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/finalconsent.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "consent",
+                            "label": "To proceed, you must expressly provide consent per the terms above.",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I consent to the provided information.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Instructions",
+                "type": "InstructionsTask",
+                "prerequisite": true,
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/finalinstructions.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "To proceed, you must expressly agree to the provided instructions.",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I agree with the provided instructions.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Example 1",
+                "instructions": "just an example",
+                "type": "QuestionnaireTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/person_reading.mp4",
+                    "muted": true
+                },
+                "form": {
+                    "fields": [{
+                        "name": "laughter",
+                        "label": "Does the person in the video laugh?",
+                        "input": {
+                            "inputType": "Radio.Group",
+                            "optionType": "button",
+                            "buttonStyle": "solid",
+                            "options": ["yes", "no"]
+                        }
+                    }]
+                }
+            },
+            {
+                "name": "Example 2",
+                "instructions": "just an example",
+                "type": "QuestionnaireTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/person_reading.mp4",
+                    "muted": true
+                },
+                "form": {
+                    "fields": [{
+                        "name": "laughter",
+                        "label": "Does the person in the video laugh?",
+                        "input": {
+                            "inputType": "Radio.Group",
+                            "optionType": "button",
+                            "buttonStyle": "solid",
+                            "options": ["yes", "no"]
+                        }
+                    }]
+                }
+            }
+        ]
+    }]
+}
