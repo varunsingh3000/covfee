@@ -3,7 +3,7 @@
     "id": "finalssp_project",
     "email": "wo1shi2wx3@gmail.com",
     "hits": [{
-        "id": "1_hit",
+        "id": "pilot_hit",
         "name": "Annotating the Laughing Action",
         "tasks": [
             {
@@ -12,7 +12,7 @@
                 "prerequisite": true,
                 "content": {
                     "type": "link",
-                    "url": "$$www$$/finalconsent.md"
+                    "url": "$$www$$/sspconsent.md"
                 },
                 "form": {
                     "fields": [
@@ -39,7 +39,7 @@
                 "prerequisite": true,
                 "content": {
                     "type": "link",
-                    "url": "$$www$$/finalinstructions.md"
+                    "url": "$$www$$/sspinstructions.md"
                 },
                 "form": {
                     "fields": [
@@ -61,49 +61,72 @@
                 }
             },
             {
-                "name": "Example 1",
+                "name": "Video 1",
                 "instructions": "just an example",
-                "type": "QuestionnaireTask",
+                "type": "Continuous1DTask",
+                "prerequisite": true,
                 "media": {
                     "type": "video",
                     "url": "$$www$$/person_reading.mp4",
                     "muted": true
                 },
-                "form": {
-                    "fields": [{
-                        "name": "laughter",
-                        "label": "Does the person in the video laugh?",
-                        "input": {
-                            "inputType": "Radio.Group",
-                            "optionType": "button",
-                            "buttonStyle": "solid",
-                            "options": ["yes", "no"]
-                        }
-                    }]
+                "intensityInput": {
+                 "mode": "ranktrace"
                 }
             },
-            {
-                "name": "Example 2",
-                "instructions": "just an example",
-                "type": "QuestionnaireTask",
-                "media": {
-                    "type": "video",
-                    "url": "$$www$$/person_reading.mp4",
-                    "muted": true
-                },
-                "form": {
-                    "fields": [{
-                        "name": "laughter",
-                        "label": "Does the person in the video laugh?",
-                        "input": {
-                            "inputType": "Radio.Group",
-                            "optionType": "button",
-                            "buttonStyle": "solid",
-                            "options": ["yes", "no"]
-                        }
-                    }]
-                }
-            }
+		{
+  			"name": "Post Questions",
+  			"type": "QuestionnaireTask",
+  			"form": {
+    				"fields": [
+					{
+            				"name": "question1",
+            				"label": "How would you rate the instructions in completing the experiment?",
+            				"required": true,
+            				"input": {
+                					"inputType": "Rate",
+                					"allowHalf": true
+            				}
+        				},
+					{
+        					"name": "question2",
+        					"label": "Have you used Covfee or similar tools before to label continous social actions?",
+            				"input": {
+                					"inputType": "Input.TextArea"
+            				}
+					},
+					{
+        					"name": "question3",
+        					"label": "What is your previous experience with the game controller?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				},
+      				{
+        					"name": "question4",
+        					"label": "Do you have any suggestions related to the informed consent?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				},
+      				{
+        					"name": "question5",
+        					"label": "Do you have any suggestions related to the instructions?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				},
+					{
+        					"name": "question6",
+        					"label": "Do you have any other suggestions that can help us improve the experiment?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				}
+
+    				 ]
+  			}
+		}
         ]
     }]
 }
