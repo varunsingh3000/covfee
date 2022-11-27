@@ -61,17 +61,29 @@
                 }
             },
             {
-                "name": "Video 1",
-                "instructions": "just an example",
+                "name": "Laughing video",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is gesturing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your keypress will be recorded.",
                 "type": "Continuous1DTask",
-                "prerequisite": true,
                 "media": {
                     "type": "video",
                     "url": "$$www$$/person_reading.mp4",
                     "muted": true
                 },
                 "intensityInput": {
-                 "mode": "ranktrace"
+                    "mode": "gamepad"
+                }
+            },
+            {
+                "name": "Laughing video 2",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is gesturing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your keypress will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/person_reading.mp4",
+                    "muted": true
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
                 }
             },
 		{
