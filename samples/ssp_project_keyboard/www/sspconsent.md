@@ -1,4 +1,4 @@
-# Delft University of Technology HUMAN RESEARCH ETHICS INFORMED CONSENT 
+# Delft University of Technology - HUMAN RESEARCH ETHICS INFORMED CONSENT 
 
 1. You are being invited to participate in a research study titled Understanding Annotation Delay Patterns in Social Actions. This study is being done by **Alex Jeleniewski, Varun Singh, Xin Wan** and their superviors **Jose Vargas Quiros and Hayley Hung** from the Seminar Social Signal Processing course of the TU Delft.
 
