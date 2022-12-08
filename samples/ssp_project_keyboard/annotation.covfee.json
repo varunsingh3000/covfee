@@ -61,29 +61,83 @@
                 }
             },
             {
-                "name": "Laughing video",
-                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is gesturing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your keypress will be recorded.",
+                "name": "Laughing audio 1",
+                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/person_reading.mp4",
-                    "muted": true
+                    "url": "$$www$$/1_clip.wav"
                 },
+                "instructionsType": "popped",
                 "intensityInput": {
-                    "mode": "gamepad"
+                    "mode": "binary",
+                    "controls": {
+                        "up": "a"
+                      }
                 }
             },
             {
-                "name": "Laughing video 2",
-                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is gesturing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your keypress will be recorded.",
+                "name": "Laughing audio 2",
+                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/person_reading.mp4",
-                    "muted": true
+                    "url": "$$www$$/3_clip.wav"
                 },
+                "instructionsType": "popped",
                 "intensityInput": {
-                    "mode": "gamepad"
+                    "mode": "binary",
+                    "controls": {
+                        "up": "a"
+                      }
+                }
+            },
+            {
+                "name": "Laughing audio 3",
+                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/5_clip.wav"
+                },
+                "instructionsType": "popped",
+                "intensityInput": {
+                    "mode": "binary",
+                    "controls": {
+                        "up": "a"
+                      }
+                }
+            },
+            {
+                "name": "Laughing audio 4",
+                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/7_clip.wav"
+                },
+                "instructionsType": "popped",
+                "intensityInput": {
+                    "mode": "binary",
+                    "controls": {
+                        "up": "a"
+                      }
+                }
+            },
+            {
+                "name": "Laughing audio 5",
+                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/9_clip.wav"
+                },
+                "instructionsType": "popped",
+                "intensityInput": {
+                    "mode": "binary",
+                    "controls": {
+                        "up": "a"
+                      }
                 }
             },
 		{

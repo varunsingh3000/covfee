@@ -1,0 +1,178 @@
+{
+    "name": "FinalSSP project",
+    "id": "finalssp_project",
+    "email": "wo1shi2wx3@gmail.com",
+    "hits": [{
+        "id": "pilot_hit",
+        "name": "Annotating the Laughing Action",
+        "tasks": [
+            {
+                "name": "Consent",
+                "type": "InstructionsTask",
+                "prerequisite": true,
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/sspconsent.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "consent",
+                            "label": "To proceed, you must expressly provide consent per the terms above.",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I consent to the provided information.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Instructions",
+                "type": "InstructionsTask",
+                "prerequisite": true,
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/sspinstructions.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "To proceed, you must expressly agree to the provided instructions.",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I agree with the provided instructions.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing audio 1",
+                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/1_clip.wav"
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
+                }
+            },
+            {
+                "name": "Laughing audio 2",
+                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/3_clip.wav"
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
+                }
+            },
+            {
+                "name": "Laughing audio 3",
+                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/5_clip.wav"
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
+                }
+            },
+            {
+                "name": "Laughing audio 4",
+                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/7_clip.wav"
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
+                }
+            },
+            {
+                "name": "Laughing audio 5",
+                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/9_clip.wav"
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
+                }
+            },
+		{
+  			"name": "Post Questions",
+  			"type": "QuestionnaireTask",
+  			"form": {
+    				"fields": [
+					{
+            				"name": "question1",
+            				"label": "How would you rate the instructions in completing the experiment?",
+            				"required": true,
+            				"input": {
+                					"inputType": "Rate",
+                					"allowHalf": true
+            				}
+        				},
+					{
+        					"name": "question2",
+        					"label": "Have you used Covfee or similar tools before to label continous social actions?",
+            				"input": {
+                					"inputType": "Input.TextArea"
+            				}
+					},
+					{
+        					"name": "question3",
+        					"label": "What is your previous experience with the game controller?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				},
+      				{
+        					"name": "question4",
+        					"label": "Do you have any suggestions related to the informed consent?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				},
+      				{
+        					"name": "question5",
+        					"label": "Do you have any suggestions related to the instructions?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				},
+					{
+        					"name": "question6",
+        					"label": "Do you have any other suggestions that can help us improve the experiment?",
+        					"input": {
+                					"inputType": "Input.TextArea"
+            				}
+      				}
+
+    				 ]
+  			}
+		}
+        ]
+    }]
+}

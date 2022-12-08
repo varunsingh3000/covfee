@@ -236,12 +236,17 @@ export class OneDIntensity extends React.Component<Props> {
                 if (this.props.replay)
                     this.intensity = this.props.getIntensity()
                 else {
+                    console.log(navigator.getGamepads())
+                    if (navigator.getGamepads().every(x => x == null)) {
+                        console.log("No contoller detected")
+                        return
+                    }
+
                     // get first controller
                     const gp = navigator.getGamepads().find(x => x.id.includes("STANDARD GAMEPAD Vendor"))
                     if (gp) {
                         // 7 is the index of right trigger
                         this.intensity = gp.buttons[7]['value']
-                        console.log("yessir")
                     }
                     this.props.setIntensity(this.intensity)
                 }
