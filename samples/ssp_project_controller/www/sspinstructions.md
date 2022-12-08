@@ -1,6 +1,6 @@
 # Instructions
 
-These are the instructions for annotating the laughing action in the video.
+These are the instructions for annotating the laughing action in the audio, you can click the **space** key to play or pause the audio.
 
 There are two ways to annotate the laughing action while watching the video, it depends on which experiment you are doing:
 1. Press the space button to start the video
