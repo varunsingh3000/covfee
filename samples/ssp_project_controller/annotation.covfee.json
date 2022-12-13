@@ -61,60 +61,266 @@
                 }
             },
             {
-                "name": "Laughing audio 1",
-                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "name": "Preview person 1",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant1.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 1",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/1_clip.wav"
+                    "url": "$$www$$/participant1.mp4"
                 },
                 "intensityInput": {
                     "mode": "gamepad"
                 }
             },
             {
-                "name": "Laughing audio 2",
-                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "name": "Preview person 2",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant3.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 2",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/3_clip.wav"
+                    "url": "$$www$$/participant3.mp4"
                 },
                 "intensityInput": {
                     "mode": "gamepad"
                 }
             },
             {
-                "name": "Laughing audio 3",
-                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "name": "Preview person 3",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant4.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 3",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/5_clip.wav"
+                    "url": "$$www$$/participant4.mp4"
                 },
                 "intensityInput": {
                     "mode": "gamepad"
                 }
             },
             {
-                "name": "Laughing audio 4",
-                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "name": "Preview person 4",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant11.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 4",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/7_clip.wav"
+                    "url": "$$www$$/participant11.mp4"
                 },
                 "intensityInput": {
                     "mode": "gamepad"
                 }
             },
             {
-                "name": "Laughing audio 5",
-                "instructions": "Play the audio and hold the right controller trigger key down when the person in the audio is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "name": "Preview person 5",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant17.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 5",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/9_clip.wav"
+                    "url": "$$www$$/participant17.mp4"
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
+                }
+            },
+            {
+                "name": "Preview person 6",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant21.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 6",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/participant21.mp4"
+                },
+                "intensityInput": {
+                    "mode": "gamepad"
+                }
+            },
+            {
+                "name": "Preview person 7",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant22.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 7",
+                "instructions": "Play the video and hold the right controller trigger key down when the person in the video is laughing. You can vary the intensity of the trigger press to show the intensity of laughing. This intensity of your trigger press will be recorded.",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/participant22.mp4"
                 },
                 "intensityInput": {
                     "mode": "gamepad"

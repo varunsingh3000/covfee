@@ -18,7 +18,7 @@
                     "fields": [
                         {
                             "name": "consent",
-                            "label": "To proceed, you must expressly provide consent per the terms above.",
+                            "label": "To proceed, you must provide consent per the terms above.",
                             "required": true,
                             "input": {
                                 "inputType": "Checkbox.Group",
@@ -45,7 +45,7 @@
                     "fields": [
                         {
                             "name": "agreement",
-                            "label": "To proceed, you must expressly agree to the provided instructions.",
+                            "label": "To proceed, you must agree to the provided instructions.",
                             "required": true,
                             "input": {
                                 "inputType": "Checkbox.Group",
@@ -61,12 +61,38 @@
                 }
             },
             {
-                "name": "Laughing audio 1",
-                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "name": "Preview person 1",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant1.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 1",
+                "instructions": "Play the video and press down the specified key when the person in the video is laughing",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/1_clip.wav"
+                    "url": "$$www$$/participant1.mp4"
                 },
                 "instructionsType": "popped",
                 "intensityInput": {
@@ -77,12 +103,38 @@
                 }
             },
             {
-                "name": "Laughing audio 2",
-                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "name": "Preview person 2",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant3.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 2",
+                "instructions": "Play the video and press down the specified key when the person in the video is laughing",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/3_clip.wav"
+                    "url": "$$www$$/participant3.mp4"
                 },
                 "instructionsType": "popped",
                 "intensityInput": {
@@ -93,12 +145,38 @@
                 }
             },
             {
-                "name": "Laughing audio 3",
-                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "name": "Preview person 3",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant4.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 3",
+                "instructions": "Play the video and press down the specified key when the person in the video is laughing",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/5_clip.wav"
+                    "url": "$$www$$/participant4.mp4"
                 },
                 "instructionsType": "popped",
                 "intensityInput": {
@@ -109,12 +187,38 @@
                 }
             },
             {
-                "name": "Laughing audio 4",
-                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "name": "Preview person 4",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant11.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 4",
+                "instructions": "Play the video and press down the specified key when the person in the video is laughing",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/7_clip.wav"
+                    "url": "$$www$$/participant11.mp4"
                 },
                 "instructionsType": "popped",
                 "intensityInput": {
@@ -125,12 +229,122 @@
                 }
             },
             {
-                "name": "Laughing audio 5",
-                "instructions": "Play the audio and press down the specified key when the person in the audio is laughing",
+                "name": "Preview person 5",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant17.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 5",
+                "instructions": "Play the video and press down the specified key when the person in the video is laughing",
                 "type": "Continuous1DTask",
                 "media": {
                     "type": "video",
-                    "url": "$$www$$/9_clip.wav"
+                    "url": "$$www$$/participant17.mp4"
+                },
+                "instructionsType": "popped",
+                "intensityInput": {
+                    "mode": "binary",
+                    "controls": {
+                        "up": "a"
+                      }
+                }
+            },
+            {
+                "name": "Preview person 6",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant21.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 6",
+                "instructions": "Play the video and press down the specified key when the person in the video is laughing",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/participant21.mp4"
+                },
+                "instructionsType": "popped",
+                "intensityInput": {
+                    "mode": "binary",
+                    "controls": {
+                        "up": "a"
+                      }
+                }
+            },
+            {
+                "name": "Preview person 7",
+                "type": "InstructionsTask",
+                "content": {
+                    "type": "link",
+                    "url": "$$www$$/preview_participant22.md"
+                },
+                "form": {
+                    "fields": [
+                        {
+                            "name": "agreement",
+                            "label": "Did you check the person?",
+                            "required": true,
+                            "input": {
+                                "inputType": "Checkbox.Group",
+                                "options": [
+                                    {
+                                        "label": "I will remember and track the person shown.",
+                                        "value": "yes"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "Laughing video 7",
+                "instructions": "Play the video and press down the specified key when the person in the video is laughing",
+                "type": "Continuous1DTask",
+                "media": {
+                    "type": "video",
+                    "url": "$$www$$/participant22.mp4"
                 },
                 "instructionsType": "popped",
                 "intensityInput": {
