@@ -14,5 +14,5 @@
   -   **Alex Jeleniewski**: <A.J.Jeleniewski@student.tudelft.nl>
   -   **Varun Singh**: <V.Singh-4@student.tudelft.nl>
   -   **Xin Wan**: <X.Wan-2@student.tudelft.nl>
-  -   **Hayley Hung: <H.Hung@tudelft.nl>
-  -   **Jose Vargas Quiros: <JDVargasQuiros@tudelft.nl>
+  -   **Hayley Hung**: <H.Hung@tudelft.nl>
+  -   **Jose Vargas Quiros**: <JDVargasQuiros@tudelft.nl>
